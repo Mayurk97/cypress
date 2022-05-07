@@ -1,6 +1,10 @@
- {
-    "firstName":"Mayur",
-    "lastName":"kadam",
-    "email":"mk24@gmail.com",
-    "comments":"i am learnin js"
+{
+    "data": [
+    {
+        "firstName":"Mayur",
+        "lastName":"kadam",
+        "email":"mk24@gmail.com",
+        "message":"i am learnin js"
+    }
+] 
 }
