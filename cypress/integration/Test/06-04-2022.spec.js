@@ -1,19 +1,19 @@
-// describe('verify the dropdown',()=>{
-//     it('verify the dropdown and select the product',()=>{
-//         cy.visit('https://www.patanjaliayurved.net/')
-//         cy.get('a[data-toggle="dropdown"]').last().trigger('mouseover')
-//         cy.get('ul[class="list-unstyled"]').children().eq(2).should('contain','Ayurvedic Medicine').as('ayurvedic')
-//         cy.get('@ayurvedic').click()
-//         cy.get('a[href="https://www.patanjaliayurved.net/product/ayurvedic-medicine/parpati-ras/swet-parpati/187"]').first().click()
-//         Cypress.on('uncaught:exception', (err, runnable) => {
-//             return false
-//         })
-//         cy.get('button[class="shoping addtocart btn"]').click().then(()=>{
-//             cy.get('div[id="PopUpMessage"]').find('p').should('contain','Your request is being processed..')
-//         })
+describe('verify the dropdown',()=>{
+    it('verify the dropdown and select the product',()=>{
+        cy.visit('https://www.patanjaliayurved.net/')
+        cy.get('a[data-toggle="dropdown"]').last().trigger('mouseover')
+        cy.get('ul[class="list-unstyled"]').children().eq(2).should('contain','Ayurvedic Medicine').as('ayurvedic')
+        cy.get('@ayurvedic').click()
+        cy.get('a[href="https://www.patanjaliayurved.net/product/ayurvedic-medicine/parpati-ras/swet-parpati/187"]').first().click()
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            return false
+        })
+        cy.get('button[class="shoping addtocart btn"]').click().then(()=>{
+            cy.get('div[id="PopUpMessage"]').find('p').should('contain','Your request is being processed..')
+        })
 
-//     })
-// })
+    })
+})
 
 describe('verify the railway ticket',()=>{
     it('check the availability of train',()=>{
