@@ -5,6 +5,18 @@
         "lastName":"kadam",
         "email":"mk24@gmail.com",
         "message":"i am learnin js"
+    },
+     {
+        "firstName":"vishal",
+        "lastName":"mane",
+        "email":"km25@gmail.com",
+        "message":"i am learnin js"
+    },
+    {
+        "firstName":"prafull",
+        "lastName":"ghate",
+        "email":"pk26@gmail.com",
+        "message":"i am learnin js"
     }
 ] 
 }

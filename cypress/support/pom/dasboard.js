@@ -1,13 +1,12 @@
-export const Dashboard ={
+export const Dashboard_selector ={
 
-    dashboard:"#menu_dashboard_index"
+    dashboard:"#welcome"
 }
 
 
 export class dash {
 
     static verifydash(){
-        cy.visit('/')
-        cy.get(Dashboard.dashboard).should('be.visible')
+        cy.get(Dashboard_selector.dashboard).should('be.visible')
     }
 }

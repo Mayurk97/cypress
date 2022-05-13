@@ -14,7 +14,7 @@ describe('verify js alert',()=>{
             cy.stub(win,'alert').as('alert')
         })
         cy.get('#button1').click()
-        cy.get('@alert').should('have.been.calledOnceWith','I am an alert box!')
+        cy.get('@alert').should('have.text','I am an alert box!')
     })
     it('verify js window alert',()=>{
         cy.visit('https://webdriveruniversity.com/Popup-Alerts/index.html')

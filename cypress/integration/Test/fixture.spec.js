@@ -1,6 +1,6 @@
 describe('verify sign up with the helpnof fixture',function(){
     before(()=>{
-        cy.fixture("users").then((data)=>{
+        cy.fixture("user").then((data)=>{
             this.data = data
         })
     })
@@ -14,7 +14,7 @@ describe('verify sign up with the helpnof fixture',function(){
         cy.get('h1').should('have.text','Thank You for your Message!')
     })
     it('verify functionality for sign up with fixure 2',()=>{
-        cy.fixture("users").then(function(data){
+        cy.fixture("user").then(function(data){
             cy.log(data)
         cy.visit('https://www.webdriveruniversity.com/Contact-Us/contactus.html')
         cy.get('input[name="first_name"]').type(data.firstName)
@@ -27,7 +27,7 @@ describe('verify sign up with the helpnof fixture',function(){
         
     })
     it('verify functionality for sign up with fixure 2',()=>{
-        cy.fixture("users").then(function(data){
+        cy.fixture("user").then(function(data){
             cy.log(data)
         cy.visit('https://www.webdriveruniversity.com/Contact-Us/contactus.html')
         cy.get('input[name="first_name"]').type(data.firstName)
@@ -40,7 +40,7 @@ describe('verify sign up with the helpnof fixture',function(){
         
     })
     it('verify functionality for sign up with fixure 2',()=>{
-        cy.fixture("users").then(function(data){
+        cy.fixture("user").then(function(data){
             cy.log(data)
             data.email="mayur@gmail"
         cy.visit('https://www.webdriveruniversity.com/Contact-Us/contactus.html')
