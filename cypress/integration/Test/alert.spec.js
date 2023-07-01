@@ -1,4 +1,6 @@
-
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+})
 
 describe('verify js alert',()=>{
     it('verify js window alert',()=>{
@@ -39,5 +41,12 @@ describe('verify js alert',()=>{
         })
         cy.contains(/^click for JS Prompt/).click()
         cy.get('#result').should('contain','I am an alert box')
+    })
+    it.only('verify alert',()=>{
+        cy.visit('https://demoqa.com/alerts')
+        cy.get('#alertButton').click()
+        cy.on('window:alert',(str)=>{
+            expect(str).to.equal('You clicked a button')
+        })
     })
 })

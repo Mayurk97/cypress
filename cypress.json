@@ -1,4 +1,3 @@
 {
-  "extends": "./cypress.json",
-  "routeUrl": "https://opensource-demo.orangehrmlive.com/index.php/auth/login"
+  "extends": "./cypress.json"
 }

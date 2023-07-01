@@ -13,7 +13,7 @@ export const login_selector = {
 export class Login {
         
     static verifyLoginVisible(){
-        cy.visit('/')
+        cy.visit('https://opensource-demo.orangehrmlive.com/index.php/auth/login')
         cy.get(login_selector.homePage).should('be.visible')
     }
 

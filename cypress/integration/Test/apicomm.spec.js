@@ -6,10 +6,6 @@ describe('verify the comments in API',()=>{
        cy.request({
            method:'GET',
            url:'https://jsonplaceholder.cypress.io/comments/1',
-           headers:{
-
-            "username":"mk97"
-        }
        }).then((response)=>{
            cy.log(response)
            expect(response.body.body).to.includes('laudantium')
@@ -31,10 +27,6 @@ describe('verify the comments in API',()=>{
         cy.request({
             method:"post",
             url:"https://reqres.in/api/users",
-            headers:{
-
-                "username":"mk97"
-            },
             body:{
                 
                 "name": "mayur",
@@ -46,18 +38,6 @@ describe('verify the comments in API',()=>{
             expect(res.body.job).to.eq('QA')
             expect(res.status).to.eq(201)
 
-        })
-    })
-    it('verify put comment',()=>{
-        cy.request({
-           mehod:"put",
-           url:"https://reqres.in/api/users/2",
-           body:{
-            "name": "mayur",
-            "job": "Tester",
-           }
-        }).then((res)=>{
-            cy.log(res)
         })
     })
 })
